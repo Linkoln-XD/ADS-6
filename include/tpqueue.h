@@ -8,7 +8,7 @@ class TPQueue {
     struct Node {
         T data;
         Node* next;
-        explicit Node(const T&data, Node* next =nullptr)
+        explicit Node(const T&data, Node* next = nullptr)
             : data(data), next(next) {}
     };
 
@@ -25,13 +25,13 @@ class TPQueue {
     }
 
     void push(const T& item) {
-        if(!head || item.prior > head->data.prior) {
+        if (!head || item.prior > head->data.prior) {
             head = new Node(item, head);
             return;
         }
 
         Node* cur = head;
-        while(cur->next &&
+        while (cur->next &&
                cur->next->data.prior >= item.prior) {
             cur = cur->next;
         }
@@ -39,7 +39,7 @@ class TPQueue {
     }
 
     T pop() {
-        if(!head) {
+        if (!head) {
             throw std::out_of_range("Empty");
         }
 
