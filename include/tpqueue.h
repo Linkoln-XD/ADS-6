@@ -17,7 +17,7 @@ class TPQueue {
  public:
     TPQueue() : head(nullptr) {}
     ~TPQueue() {
-        while(head) {
+        while (head) {
             Node* temp = head;
             head = head->next;
             delete temp;
