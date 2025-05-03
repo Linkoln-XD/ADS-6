@@ -40,7 +40,7 @@ class TPQueue {
 
     T pop() {
         if (!head) {
-            throw std::out_of_range("Empty");
+            throw std::string("Empty");
         }
 
         T res = head->data;
