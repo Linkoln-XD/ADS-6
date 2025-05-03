@@ -4,12 +4,11 @@
 
 template<typename T>
 class TPQueue {
-
   private:
     struct Node {
         T data;
         Node* next;
-        explicit Node(const T&data, Node* next = nullptr)
+        explicit Node(const T& data, Node* next = nullptr)
             : data(data), next(next) {}
     };
 
